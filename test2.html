@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPX Overlay on OSM</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+    <script>
+        // Step 2: Initialize the Leaflet map
+        var map = L.map('map').setView([51.505, -0.09], 13); // Initial map view (Latitude, Longitude)
+
+        // Step 3: Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Step 4: Load GPX file and add it to the map
+        var gpx = 'path_to_your_gpx_file.gpx'; // Path to your GPX file (could be a URL or local path)
+        new L.GPX(gpx, {
+            async: true,
+            marker_options: {
+                startIconUrl: 'https://example.com/start-icon.png',  // Customize start marker icon if needed
+                endIconUrl: 'https://example.com/end-icon.png'     // Customize end marker icon if needed
+            }
+        }).on('loaded', function(e) {
+            map.fitBounds(e.target.getBounds());  // Zoom to the GPX track bounds
+        }).addTo(map);
+    </script>
+</body>
+</html>
