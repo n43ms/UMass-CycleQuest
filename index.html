@@ -5,6 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMass Cycling Routes</title>
     <link rel="stylesheet" href="styles2.css">
+    <style>
+        @font-face {
+    font-family: 'arcade';
+    src: url('fonts/ByteBounce.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'arcade';
+    background-color: #000;
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+}
+
+.container {
+    background-color: #111;
+    border: 5px solid #00FF00;
+    padding: 40px;  /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 4em;
+    text-shadow: 0 0 10px #00FF00;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 2.5em;
+}
+p {
+ font-size: 2em;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Increased gap */
+}
+
+.btn {
+    font-family: 'arcade';
+    background-color: #000;
+    color: #00FF00;
+    border: 3px solid #00FF00;
+    font-size: 2em; /* Increased button font size */
+    padding: 20px 40px;  /* Increased padding */
+    border-radius: 10px; /* Slightly larger border radius */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #00FF00;
+    color: #000;
+    transform: scale(1.2); /* Increased hover scale effect */
+}
+
+#easy {
+    border-color: #007FFF;
+    width: 200px;
+}
+
+#medium {
+    border-color: #FFA500;
+    width: 200px;
+}
+
+
+#hard {
+    border-color: #FF0000;
+    width: 200px;
+}
+
+#god-mode {
+    border-color: #800080;
+    width: 200px;
+}
+
+a {
+    color: inherit; /* Inherits color from parent (or set a specific color if preferred) */
+    text-decoration: none; /* Removes underline */
+}
+    </style>
 </head>
 <body>
     <div class="container">
