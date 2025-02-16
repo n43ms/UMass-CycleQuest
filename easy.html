@@ -14,8 +14,8 @@
         }
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
             gap: 20px;
             padding: 20px;
             justify-content: center;
@@ -26,24 +26,49 @@
             margin: auto;
         }
         .description {
-            grid-column: span 3;
+            grid-column: span 2;
             padding: 10px;
             font-size: 14px;
+        }
+        .route-description {
+            font-size: 12px;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>🚴 Easy Mode - Cycling Routes 🚴</h1>
+    <h1>🚴 Easy Mode 🚴</h1>
     <div class="container">
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470466" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.26/42.417/-72.5042" data-from-embed="false"></div>
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470501" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.56/42.3682/-72.5663" data-from-embed="true"></div>
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16471390" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="9.91/42.4289/-72.5596" data-from-embed="true"></div>
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470466" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.26/42.417/-72.5042" data-from-embed="false"></div>
+            <div class="route-description">Leverett Loop – Need a quick spin between classes? This one's for you!</div>
+        </div>
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470501" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.56/42.3682/-72.5663" data-from-embed="true"></div>
+            <div class="route-description">Flatlands - Bikepath / Hadley Dikes – A smooth and scenic ride for a relaxed cruise.</div>
+        </div>
         
-        <div class="description">Explore scenic and challenging routes around the area.</div>
         
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470365" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.36/42.3548/-72.481" data-from-embed="true"></div>
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470255" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.18/42.4131/-72.4767" data-from-embed="true"></div>
-        <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470255" data-units="metric" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.18/42.4131/-72.4767" data-from-embed="true"></div>
+        
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16471390" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="9.91/42.4289/-72.5596" data-from-embed="true"></div>
+            <div class="route-description">Sugarloaf Loop – Ideal for hill intervals and endurance training, though the steep descent can be scary.</div>
+        </div>
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470365" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.36/42.3548/-72.481" data-from-embed="true"></div>
+            <div class="route-description">Gulf Rd – A solid, quick climb to push your limits.</div>
+        </div>
+        
+        
+        
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470255" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="10.18/42.4131/-72.4767" data-from-embed="true"></div>
+            <div class="route-description">S-Turns – Your go-to quick climb for a short but intense ride.</div>
+        </div>
+        <div>
+            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="16470391" data-units="imperial" data-full-width="true" data-style="hybrid" data-terrain="2d" data-map-hash="9.56/42.4615/-72.4928" data-from-embed="true"></div>
+            <div class="route-description">Book Mill Cafe Ride – The perfect cafe ride for bikers who love a good mid-ride cafe break.</div>
+        </div>
     </div>
     <script src="https://strava-embeds.com/embed.js"></script>
 </body>
