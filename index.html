@@ -42,6 +42,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s ease-in-out 2s forwards; /* Fade in after emoji animation */
         }
         
         .title h1 {
@@ -107,12 +109,44 @@
         }
         #c {
             margin-top: 70px
+        } #emoji-intro {
+            position: absolute;
+            font-size: 8em; /* Larger emoji size */
+            right: -200px; /* Start off-screen to the right */
+            top: 50%;
+            transform: translateY(-50%);
+            animation: moveEmoji 2s ease-in-out forwards;
         }
+
+        @keyframes moveEmoji {
+            0% {
+                right: -200px; /* Start off-screen to the right */
+            }
+            100% {
+                right: calc(100% + 200px); /* Move off-screen to the left */
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="emoji-intro">🚴</div>
+        
 
     </style>
 </head>
 <body>
     <br><br>
+    
     <div class="container">
         <div class="title">
             <h1>Hey UMass Cyclists</h1>
